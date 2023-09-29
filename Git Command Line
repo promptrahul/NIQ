@@ -1,1 +1,66 @@
+## Get Installed on your local machine  :  
+## GET SSH configure on you local pointing remote repository
 
+
+
+
+## Find the Git Version
+git --version
+## Configure your name and Email address in Git 
+git config --list --show-origin
+git config --global user.name "Rahul Khandelwal"
+git config --global user.email "rahul.khandelwal@aitouch.in"
+
+## TO turn up main as Default branch
+git config --global init.defaultBranch main
+
+## Move to the folder you want to Setup your project 
+cd C:\Users\DELL\Desktop\Operation\project
+git init 
+git status
+
+## To Clone the Repository 
+git clone ssh://git@adlm.nielseniq.com:7999/rtm/ia-ps-dataservices.git
+
+## To Add files in repo 
+git add 
+git commit -m "First index.txt"
+git log
+
+## To Create Branch on local 
+git branch KHRA3001_TEST_BRANCH
+git checkout -b emergency-fix        -- Create New branch and switch it to this.
+
+## To Swtich Branch
+git checkout KHRA3001_TEST_BRANCH
+
+## To See Current Status 
+git status 
+
+## To Merge into Master 
+git checkout master
+git merge emergency-fix
+
+## To delte the Branch 
+git branch -d emergency-fix
+git push origin :emergency-fix
+
+##To Pull Remote brnach On  your local
+git checkout -b feature/KHRA3001_TEST_BRANCH     -- Create Local Branch with same name as on the remote. 
+git pull origin feature/KHRA3001_TEST_BRANCH     -- Pull the remote Branch 
+
+
+##To delete branch local and on remote
+git branch -d feature/KHRA3001_TEST_BRANCH
+git push origin :feature/KHRA3001_TEST_BRANCH
+
+
+## All below statement will pull from the Remote
+git pull origin feature/KHRA3001_TEST_BRANCH
+git fetch origin feature/KHRA3001_TEST_BRANCH
+git merge origin feature/KHRA3001_TEST_BRANCH
+
+
+## To Get help On the GIT
+git commit --help
+git help --all
