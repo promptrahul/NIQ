@@ -1,3 +1,11 @@
+To make the wheel file 
+-----------------------
 pip install setuptools
 pip install wheel
 python setup.py bdist_wheel
+
+To Invoke databricks API 
+------------------------
+curl --location 'https://adb-2629870583600999.19.azuredatabricks.net/api/2.1/jobs/runs/get-output?run_id=4170493' \
+--header 'Authorization: Bearer dapif8b4cb21e86d16ec9a07ffb977cf4429-3'
+
